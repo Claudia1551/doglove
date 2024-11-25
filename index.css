@@ -1,0 +1,358 @@
+/* Eliminar los margenes y padding por defecto de todas las etiquetas */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* CSS Variables */
+:root {
+    --color-primario: #ee8cf4;
+    --color-secundario: #3c3c3c;
+    --color-terciario: #f4f4f4;
+    --color-fondo: #DCBFFF;
+    --font-family-primario: "Modern Era", sans-serif;
+    --font-family-secundario: "Sour Gummy", sans-serif;
+}
+
+/* Estilos generales */
+body {
+    background-color: var(--color-fondo);
+    font-family: var(--font-family-primario);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--color-secundario)
+}
+a {
+    text-decoration: none;
+    color: var(--color-secundario);
+    font-size: 16px;
+}
+p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+button {
+    background-color: var(--color-primario);
+    padding: 13px 35px;
+    border-radius: 30px;
+    border-width: 0px;
+    font-weight: 800;
+    font-size: 16px;
+    cursor: pointer;
+    color: var(--color-secundario);
+}
+section {
+    margin-top: 100px;
+}
+h1, h2, h3, h4, h5 {
+    font-family: var(--font-family-secundario);
+}
+h1 {
+    font-size: 60px;
+    font-weight: 300;
+    line-height: 70px;
+}
+h2 {
+    font-size: 28px;
+    color: var(--color-primario);
+    font-weight: 700;
+}
+h3 {
+    font-size: 26px;
+    color: var(--color-primario);
+    font-weight: 400;
+}
+h4 {
+    font-size: 24px;
+}
+h5 {
+    font-size: 20px;
+}
+strong {
+    color: black;
+}
+main {
+    width: 60%;
+    margin: 0 auto;
+}
+.grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+.grid-imagen img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+.grid-imagen {
+    position: relative;
+    overflow: hidden;
+}
+.grid-imagen:hover img {
+    opacity: 0.7;
+}
+.grid-imagen button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color-primario);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.grid-imagen:hover button {
+    opacity: 1;
+}
+
+/* Estilos para el navbar o la navegacion */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    width: 80%;
+}
+nav > ul {
+    gap: 40px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+nav > ul > li > a:hover {
+    color: var(--color-primario);
+}
+
+/* Estilos para la parte inicial de la pagina */
+header {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+}
+.titulo {
+    font-size: 50px;
+}
+.inicio {
+    display: flex;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+.inicio-texto > button {
+    height: 58px;
+    width: 150px;
+    margin-top: 20px;
+}
+.inicio-texto {
+    flex: 0.5;
+    padding: 0 90px;
+}
+.inicio-imagen {
+    flex: 0.5;
+}
+.inicio img {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos para la seccion de adopcion */
+.adopcion {
+    text-align: center;
+}
+
+/* Estilos para la seccion de donaciones */
+.donaciones {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.donaciones-texto {
+    flex: 0.5;
+}
+.donaciones-texto > button {
+    margin-top: 20px;
+    padding: 17px 44px;
+}
+.donaciones-texto > p {
+    margin-top: 5px;
+}
+.donaciones-progress {
+    flex: 0.5;
+}
+.metodos-de-pago {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.metodos-de-pago img {
+    width: 80px;
+    height: auto;
+}
+progress {
+    width: 500px;
+    height: 50px;
+    -webkit-appearance: none;
+    appearance: none;
+}
+progress::-webkit-progress-bar {
+    background-color: var(--color-terciario);
+    border-radius: 30px;
+    border: 2px solid var(--color-primario);
+}
+progress::-webkit-progress-value {
+    background-color: var(--color-primario);
+    border-radius: 30px;
+}
+progress::-moz-progress-bar {
+    background-color: var(--color-primario);
+    border-radius: 30px;
+    border: 2px solid var(--color-primario);
+}
+
+/* Estilos para la seccion de contactanos */
+.contacto {
+    margin-top: 100px;
+}
+.contacto > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+.contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contacto input, .contacto textarea {
+    border: none;
+    border-bottom: 2px solid var(--color-primario);
+    background-color: transparent;
+    height: 44px;
+    padding: 10px;
+    font-size: 16px;
+}
+.contacto textarea {
+    height: 100px;
+}
+.contacto img {
+    width: 500px;
+}
+.contacto-texto {
+    flex: 0.8;
+}
+.contacto-imagen {
+    flex: 0.2;
+}
+
+/* Estilos para la seccion el footer */
+footer {
+    background-color: var(--color-secundario);
+    padding: 100px 10% 50px 10%;
+    width: 80%;
+    color: var(--color-terciario);
+}
+.footer2 {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding-left: 50px;
+}
+footer h4 {
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+footer h5 {
+    margin-bottom: 20px;
+}
+.footer-informacion {
+    border-right-width: 2px;
+    border-right-color: var(--color-terciario);
+    border-right-style: solid;
+    padding-right: 50px;
+}
+.footer-derechos {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+/* Estilos para manejar el responsive */
+@media (max-width: 1200px) {
+    .inicio {
+        flex-direction: column;
+        height: auto;
+    }
+    .inicio-texto, .inicio-imagen {
+        flex: 1;
+        padding: 20px;
+    }
+    img {
+        width: 50%;
+    }
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .donaciones {
+        flex-direction: column;
+    }
+    main {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        width: 100%;
+    }
+    nav > ul {
+        margin: 30px 0;
+    }
+    .inicio {
+        width: 100%;
+        padding-top: 50px;
+    }
+    .inicio-texto {
+        padding: 0 20px;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .contacto > div {
+        flex-direction: column;
+    }
+    .contacto img {
+        width: 100%;
+    }
+    .contacto-texto {
+        width: 100%;
+    }
+    footer {
+        padding: 50px 5%;
+        width: 90%;
+    }
+    .footer2 {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-informacion {
+        border-right: none;
+        padding-right: 0;
+        text-align: center;
+    }
+    main {
+        width: 90%;
+    }
+}

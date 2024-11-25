@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doglove</title>
+    <link href="https://db.onlinewebfonts.com/c/74613e9d0612d09be09dd6de7c898d50?family=Modern+Era" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h3 class="titulo">Doglove</h3>
+            <ul>
+                <li><a href="#adopcion">Mascotas</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <button type="button" onclick="location.href='#donaciones'">Donar</button>
+        </nav>
+        <div class="inicio">
+            <div class="inicio-texto">
+                <h1>Adopta un amigo fiel y cambia una vida para siempre</h1>
+                <p>Ofrecemos apoyo y recursos para que puedas adoptar un perro y darle un hogar lleno de amor. ¡Haz la diferencia en la vida de un animal hoy mismo!</p>
+                <button onclick="location.href='#adopcion'">Adoptar!</button>
+            </div>
+            <div class="inicio-imagen">
+                <img src="./assets/dog.png" alt="Imagen">
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="adopcion" class="adopcion">
+            <h2>Adopta una mascota</h2>
+            <p>Encuentra a tu compañero ideal y dale un hogar lleno de amor. ¡Adoptar es salvar una vida!</p>
+            <div class="grid">
+                <div class="grid-imagen">
+                    <img src="./assets/dog1.png" alt="Imagen">
+                    <button onclick="location.href='#contacto'">Adoptar</button>
+                </div>
+                <div class="grid-imagen">
+                    <img src="./assets/dog2.png" alt="Imagen">
+                    <button onclick="location.href='#contacto'">Adoptar</button>
+                </div>
+                <div class="grid-imagen">
+                    <img src="./assets/dog3.png" alt="Image 3">
+                    <button onclick="location.href='#contacto'">Adoptar</button>
+                </div>
+                <div class="grid-imagen">
+                    <img src="./assets/dog4.png" alt="Image 4">
+                    <button onclick="location.href='#contacto'">Adoptar</button>
+                </div>
+                <div class="grid-imagen">
+                    <img src="./assets/dog5.png" alt="Image 5">
+                    <button onclick="location.href='#contacto'">Adoptar</button>
+                </div>
+                <div class="grid-imagen">
+                    <img src="./assets/dog6.png" alt="Image 6">
+                    <button onclick="location.href='#contacto'">Adoptar</button>
+                </div>
+                <div class="grid-imagen">
+                    <img src="./assets/dog7.png" alt="Image 7">
+                    <button onclick="location.href='#contacto'">Adoptar</button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="donaciones" class="donaciones">
+            <div class="donaciones-texto">
+                <h2>Meta de donación</h2>
+                <p>Nuestro objetivo es recaudar <strong>$5,000,000</strong> para apoyar a nuestro refugio de animales. Sus donaciones nos ayudarán a brindar alimentos, atención médica y refugio a los animales que lo necesitan.</p>
+                <br>
+                <p>Hemos recaudado <strong>$1,700,000</strong> hasta ahora. ¡Ayúdanos a alcanzar nuestra meta!</p>
+                <button type="button" onclick="mostrarMethodosDePago()">Donar Ahora</button>
+                <div id="metodos-de-pago" class="metodos-de-pago" style="display: none;">
+                    <a href="https://www.paypal.com" target="_blank">
+                        <img src="./assets/paypal.png" alt="PayPal">
+                    </a>
+                    <a href="https://www.visa.com" target="_blank">
+                        <img src="./assets/visa.png" alt="Visa">
+                    </a>
+                    <a href="https://www.americanexpress.com/" target="_blank">
+                        <img src="./assets/americanexpress.png" alt="American Express">
+                    </a>
+                    <a href="https://www.pse.com.co/persona" target="_blank">
+                        <img src="./assets/pse.png" alt="PSE">
+                    </a>
+                </div>
+            </div>
+            <div class="donaciones-progress">
+                <progress id="donation-progress" value="3000" max="10000"></progress>
+            </div>
+        </section>
+
+        <section id="servicios" class="servicios">
+            <h2>Nuestros Servicios</h2>
+            <p>Somos una organización dedicada a encontrar hogares amorosos para nuestros perros y recibir donaciones para alimentarlos y cuidarlos.</p>
+            <div class="grid">
+                <div class="grid-imagen">
+                    <h3>Adopción</h3>
+                    <p>Ayudamos a nuestros perros a encontrar un hogar permanente y amoroso. Cada adopción incluye una consulta veterinaria y un paquete de bienvenida.</p>
+                </div>
+                <div class="grid-imagen">
+                    <h3>Donaciones</h3>
+                    <p>Recibimos donaciones para proporcionar alimentos, atención médica y refugio a los perros que lo necesitan. Cada donación marca una gran diferencia.</p>
+                </div>
+                <div class="grid-imagen">
+                    <h3>Voluntariado</h3>
+                    <p>Ofrecemos oportunidades de voluntariado para aquellos que desean ayudar a cuidar a nuestros perros y apoyar nuestras actividades diarias.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contacto">
+            <h2>Contáctanos</h2>
+            <div>
+                <div class="contacto-texto">
+                    <form>
+                        <input type="text" placeholder="Nombre" required>
+                        <input type="email" placeholder="Correo electrónico" required>
+                        <input type="tel" placeholder="Número de Teléfono" required>
+                        <textarea placeholder="Mensaje" required></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+                <div class="contacto-imagen">
+                    <img src="./assets/dog-gafas.png" alt="Imagen">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h4>Adopta un amigo para toda la vida</h4>
+        <div class="footer2">
+            <div class="footer-informacion">
+                <h5>Información</h5>
+                <p>Correo: doglove@soporte.com</p>
+                <p>Teléfono: 123-456-7890</p>
+                <p>Dirección: Cra. 56c #51198 51- a, La Candelaria, Medellín, Antioquia</p>
+            </div>
+            <div>
+                <h5>Redes Sociales</h5>
+                <p><a href="https://www.facebook.com" target="_blank">Facebook</a></p>
+                <p><a href="https://www.instagram.com" target="_blank">Instagram</a></p>
+                <p><a href="https://www.x.com" target="_blank">Twitter</a></p>
+            </div>
+        </div>
+        <div class="footer-derechos">
+            <p>&copy; 2024 SENA Sofía Plus</p>
+            <p>Hecho por: Claudia Ávila y Luisa Gómez</p>
+        </div>
+    </footer>
+    <script>
+        function mostrarMethodosDePago() {
+            document.getElementById('metodos-de-pago').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
