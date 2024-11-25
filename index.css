@@ -287,6 +287,9 @@ footer h5 {
     justify-content: space-between;
     padding-top: 50px;
 }
+footer a {
+    color: var(--color-terciario);
+}
 
 /* Estilos para manejar el responsive */
 @media (max-width: 1200px) {
