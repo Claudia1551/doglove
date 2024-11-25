@@ -155,6 +155,10 @@ header {
 .inicio-texto {
     flex: 0.5;
     padding: 0 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 40px;
 }
 .inicio-imagen {
     flex: 0.5;
