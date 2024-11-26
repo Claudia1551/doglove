@@ -6,7 +6,7 @@
     <link href="https://db.onlinewebfonts.com/c/74613e9d0612d09be09dd6de7c898d50?family=Modern+Era" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -15,6 +15,7 @@
             <h3 class="titulo">Doglove</h3>
             <ul>
                 <li><a href="#adopcion">Mascotas</a></li>
+                <li><a href="#rescates">Rescates</a></li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
@@ -68,11 +69,20 @@
         </section>
         
         <section id="donaciones" class="donaciones">
+            <h2>Meta de donación</h2>
+            <p>Nuestro objetivo es recaudar <strong>$5,000,000</strong> para apoyar a nuestro refugio de animales. Sus donaciones nos ayudarán a brindar alimentos, atención médica y refugio a los animales que lo necesitan.</p>
+            <p>Hemos recaudado <strong>$1,700,000</strong> hasta ahora. ¡Ayúdanos a alcanzar nuestra meta!</p>
             <div class="donaciones-texto">
-                <h2>Meta de donación</h2>
-                <p>Nuestro objetivo es recaudar <strong>$5,000,000</strong> para apoyar a nuestro refugio de animales. Sus donaciones nos ayudarán a brindar alimentos, atención médica y refugio a los animales que lo necesitan.</p>
-                <br>
-                <p>Hemos recaudado <strong>$1,700,000</strong> hasta ahora. ¡Ayúdanos a alcanzar nuestra meta!</p>
+                <div id="donacion-opciones" class="donacion-opciones">
+                    <button onclick="cambiarMontoDonacion(100000)">100,000</button>
+                    <button onclick="cambiarMontoDonacion(300000)">300,000</button>
+                    <button onclick="cambiarMontoDonacion(500000)">500,000</button>
+                    <button onclick="cambiarMontoDonacion(1000000)">1,000,000</button>
+                    <button onclick="cambiarMontoDonacion(1500000)">1,500,000</button>
+                    <button onclick="cambiarMontoDonacion(2000000)">2,000,000</button>
+                </div>
+                <input type="number" id="donacion-monto" placeholder="Otro monto">
+                <progress value="3000" max="10000"></progress>
                 <button type="button" onclick="mostrarMethodosDePago()">Donar Ahora</button>
                 <div id="metodos-de-pago" class="metodos-de-pago" style="display: none;">
                     <a href="https://www.paypal.com" target="_blank">
@@ -89,9 +99,14 @@
                     </a>
                 </div>
             </div>
-            <div class="donaciones-progress">
-                <progress id="donation-progress" value="3000" max="10000"></progress>
-            </div>
+        </section>
+
+        <section id="rescates" class="rescate">
+            <h2>Hemos rescatado más de 950 peludos</h2>
+            <video controls>
+                <source src="./assets/video.mp4" type="video/mp4">
+                Tu navegador no soporta la etiqueta de video.
+            </video>
         </section>
 
         <section id="servicios" class="servicios">
@@ -153,6 +168,10 @@
         </div>
     </footer>
     <script>
+        function cambiarMontoDonacion(amount) {
+            document.getElementById('donacion-monto').value = amount;
+        }
+
         function mostrarMethodosDePago() {
             document.getElementById('metodos-de-pago').style.display = 'block';
         }

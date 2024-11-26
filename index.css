@@ -55,7 +55,7 @@ h1 {
     line-height: 70px;
 }
 h2 {
-    font-size: 28px;
+    font-size: 40px;
     color: var(--color-primario);
     font-weight: 700;
 }
@@ -76,6 +76,13 @@ strong {
 main {
     width: 60%;
     margin: 0 auto;
+}
+video {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    max-height: 500px;
+    border-radius: 30px;
 }
 .grid {
     margin-top: 20px;
@@ -173,38 +180,63 @@ header {
     text-align: center;
 }
 
+.rescate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.rescate h2 {
+    margin-bottom: 20px;
+}
+
 /* Estilos para la seccion de donaciones */
 .donaciones {
     margin-top: 100px;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.donaciones h2 {
+    margin-bottom: 10px;
+}
+.donaciones-uno {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     gap: 50px;
 }
 .donaciones-texto {
-    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .donaciones-texto > button {
     margin-top: 20px;
     padding: 17px 44px;
 }
-.donaciones-texto > p {
-    margin-top: 5px;
+.donaciones-texto input {
+    width: 50%;
 }
-.donaciones-progress {
-    flex: 0.5;
-}
-.metodos-de-pago {
+.donacion-opciones {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
     margin-top: 20px;
 }
 .metodos-de-pago img {
     width: 80px;
     height: auto;
+    margin-top: 20px;
 }
 progress {
-    width: 500px;
+    margin-top: 20px;
+    width: 60%;
     height: 50px;
     -webkit-appearance: none;
     appearance: none;
@@ -239,13 +271,15 @@ progress::-moz-progress-bar {
     flex-direction: column;
     gap: 20px;
 }
-.contacto input, .contacto textarea {
+input, textarea {
     border: none;
     border-bottom: 2px solid var(--color-primario);
     background-color: transparent;
     height: 44px;
     padding: 10px;
     font-size: 16px;
+    width: 100%;
+    outline: none;
 }
 .contacto textarea {
     height: 100px;
@@ -358,6 +392,9 @@ footer a {
         border-right: none;
         padding-right: 0;
         text-align: center;
+    }
+    progress {
+        width: 100%;
     }
     main {
         width: 90%;
