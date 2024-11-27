@@ -71,8 +71,8 @@
         
         <section id="donaciones" class="donaciones">
             <h2>Meta de donación</h2>
-            <p>Nuestro objetivo es recaudar <strong>$5,000,000</strong> para apoyar a nuestro refugio de animales. Sus donaciones nos ayudarán a brindar alimentos, atención médica y refugio a los animales que lo necesitan.</p>
-            <p>Hemos recaudado <strong>$1,700,000</strong> hasta ahora. ¡Ayúdanos a alcanzar nuestra meta!</p>
+            <p>Nuestro objetivo es recaudar <strong>$15,000,000</strong> para apoyar a nuestro refugio de animales. Sus donaciones nos ayudarán a brindar alimentos, atención médica y refugio a los animales que lo necesitan.</p>
+            <p>Hemos recaudado <strong>$0</strong> hasta ahora. ¡Ayúdanos a alcanzar nuestra meta!</p>
             <div class="donaciones-texto">
                 <div id="donacion-opciones" class="donacion-opciones">
                     <button onclick="cambiarMontoDonacion(100000)">100,000</button>
@@ -83,8 +83,8 @@
                     <button onclick="cambiarMontoDonacion(2000000)">2,000,000</button>
                 </div>
                 <input type="number" id="donacion-monto" placeholder="Otro monto">
-                <progress value="3000" max="10000"></progress>
-                <button type="button" onclick="mostrarMethodosDePago()">Donar Ahora</button>
+                <progress value="0" max="15000000"></progress>
+                <button id="donar-ahora-boton" type="button" onclick="mostrarMethodosDePago()">Donar Ahora</button>
                 <div id="metodos-de-pago" class="metodos-de-pago" style="display: none;">
                     <a href="https://www.paypal.com" target="_blank">
                         <img src="./assets/paypal.png" alt="PayPal">
@@ -164,18 +164,28 @@
             </div>
         </div>
         <div class="footer-derechos">
-            <p>&copy; 2024 SENA Sofía Plus</p>
+            <p>&copy; 2024 ADSO</p>
             <p>Hecho por: Claudia Ávila y Luisa Gómez</p>
         </div>
     </footer>
     <script>
+        function incrementarProgreso(amount) {
+            const progress = document.querySelector('progress');
+            progress.value = progress.value + amount;
+        }
+
         function cambiarMontoDonacion(amount) {
-            document.getElementById('donacion-monto').value = amount;
+            incrementarProgreso(amount);
         }
 
         function mostrarMethodosDePago() {
             document.getElementById('metodos-de-pago').style.display = 'block';
         }
+
+        document.querySelector("#donar-ahora-boton").addEventListener('click', function() {
+            const amount = parseInt(document.getElementById('donacion-monto').value) || 0;
+            incrementarProgreso(amount);
+        });
     </script>
 </body>
 </html>
